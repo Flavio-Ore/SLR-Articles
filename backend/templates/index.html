@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramienta de Análisis Semántico para Revisiones Sistemáticas de Literatura</title>
+    <link rel="stylesheet" href={{ url_for('static', filename='Css/styles.css' ) }}>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="redalyc-header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>Mi Repositorio RSL</h1>
+            </div>
+            <nav>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <section class="search-section">
+            <h2>Analizar Artículos Científicos para RSL</h2>
+            <div class="search-box">
+                <input type="file" id="subirArchivo" accept=".pdf, .txt" multiple>
+                <label for="subirArchivo" class="upload-button">Seleccionar Archivos</label>
+            </div>
+            <div id="nombresArchivosSeleccionados">
+            </div>
+            <button type="button" id="botonAnalizar" class="analyze-button">Iniciar Análisis Semántico</button>
+        </section>
+
+        <section class="info-section">
+            <div class="info-card">
+                <h3>Archivos Cargados</h3>
+                <div id="cantidadArchivos">0</div>
+            </div>
+        </section>
+
+        <div class="image-placeholder">
+        </div>
+
+        <section id="resultados-analisis" class="resultados-section" style="display: none;">
+            <h2>Resultados del Análisis Semántico</h2>
+            <div class="resultados-content">
+                <div id="tabla-resultados-container">
+                </div>
+                <div class="filter-container">
+                    <h3>Filtrar Columnas</h3>
+                    <div id="column-filter-controls">
+                    </div>
+                </div>
+            </div>
+            <button id="descargar-csv" class="download-button" style="display: none;">Descargar como CSV</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Mi Repositorio RSL</p>
+    </footer>
+
+    <script src={{ url_for('static', filename='Js/script.js' ) }}></script>
+</body>
+
+</html>
